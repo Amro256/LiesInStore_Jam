@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Amro Folder/Scenes/PrologueScene.unity
     guid: 0fbfc050c633e0f4492a426dbb852e34
+  - enabled: 1
+    path: Assets/Scenes/Blockout.unity
+    guid: 5e37313fe5622714b9877b30c318ca85
   m_configObjects: {}
