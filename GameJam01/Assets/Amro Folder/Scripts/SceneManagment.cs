@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneManagment : MonoBehaviour
 {
 
     public static SceneManagment Instance; //Singleton for global access 
-
+    
     //Use Void Awake to set up the 
     private void Awake()
     {
@@ -46,17 +47,8 @@ public class SceneManagment : MonoBehaviour
                 SceneManager.LoadScene("Blockout");
             }
 
-            
         }
      }    
-
-
-    //Quit game method 
-    public void QuitGame()
-    {
-        Application.Quit();
-        Debug.Log("Application Quit");
-    }
 
 
 }

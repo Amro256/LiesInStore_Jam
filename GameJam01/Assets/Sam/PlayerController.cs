@@ -12,6 +12,17 @@ public class PlayerController : MonoBehaviour
     float movementX;
     float movementZ;
 
+    public GameObject CanvasPanel; //Reference to UI Canvas
+    public bool isPaused;  //Bool to check if the game is paused
+
+    public Camera cam; //Reference to cam
+
+     void Start()
+    {
+        CanvasPanel.SetActive(false);
+        cam = GetComponent<Camera>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +34,19 @@ public class PlayerController : MonoBehaviour
         movementX = Input.GetAxis("Horizontal");
         movementZ = Input.GetAxis("Vertical");
 
+        //Pause
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
         
     }
 
@@ -33,5 +57,23 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(move * moveSpeed * Time.deltaTime);
         
+    }
+
+    //Pause Game method
+
+    public  void PauseGame()
+    {
+        CanvasPanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    //Resume Game Script
+
+    public void ResumeGame()
+    {
+        CanvasPanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 }

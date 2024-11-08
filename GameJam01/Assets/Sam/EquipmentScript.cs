@@ -9,6 +9,10 @@ public class EquipmentScript : MonoBehaviour
     public GameObject flashlight;
     public GameObject taser;
 
+    //Variables for the light source to enable and disable it
+    
+
+    
 
     // Update is called once per frame
     void Update()
