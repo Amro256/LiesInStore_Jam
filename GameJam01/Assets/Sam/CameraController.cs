@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    
+    public float mouseSensitivity = 20f;
 
     public Transform playerBody;
 
@@ -12,7 +13,8 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = true; // Testing Purposes
+        //Cursor.lockState = CursorLockMode.Locked; 
     }
 
     // Update is called once per frame
